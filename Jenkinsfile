@@ -8,16 +8,7 @@ pipeline {
         }
         stage('Build'){
             steps{
-                //sh 'chmod -R 777 .'
                 sh './gradlew build'
-            }
-        }
-        stage('Unit Test'){
-            tools{
-                jdk 'java-8'
-            }
-            steps{
-                sh './gradlew test'
             }
         }
     }
