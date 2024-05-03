@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build'){
             tools {
-                jdk 'java-8'
+                jdk 'java-11'
            }
             steps{
                 sh'chmod -R 777.'
