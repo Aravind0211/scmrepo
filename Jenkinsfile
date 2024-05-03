@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Repo Checkout'){
       steps{
-      checkout GitSCM([ $class: 'GitSCM',branches :[[name :'*/main']], extensions : [], userRemoteConfigs : [[url:'https://github.com/Aravind0211/scmrepo.git']]])
+      checkout scmGit([ $class: 'GitSCM',branches :[[name :'*/main']], extensions : [], userRemoteConfigs : [[url:'https://github.com/Aravind0211/scmrepo.git']]])
       }
     }
   }
